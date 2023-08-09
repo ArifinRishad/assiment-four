@@ -90,31 +90,16 @@ console.log(findAddress(person));
 // problem five
 
 function canPay(changeArray, totalDue) {
-if(typeof changeArray.length(0) ){
-    return 'please enter array data';
-}
-else{
-    return 'sorry'
-}
-// else{
-//     let total = changeArray[0];
-//     for (let i = 0; i < changeArray.length; i++) {
-//         total += changeArray[i];
-//     }
-//     return total;
-    
-
-
-//     if (total > totalDue) {
-//         return true;
-//     }
-//     else {
-//         return false;
-//     }
-// }
-   
-}
-const coin = [];
+    let total=0;
+    for(let i=0; i<changeArray.length; i++){
+        total=total+changeArray[i];
+    }
+    if(total>= totalDue){
+        return true
+    }
+    return false
+}   
+const coin = [1,3,5];
 const productPrice = 10;
-const pay = canPay(coin, productPrice)
-console.log(pay)
+const pay = canPay(coin, productPrice);
+console.log(pay);
